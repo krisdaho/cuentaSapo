@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h1 id="colorBienvenida">Bienvenido a Cuenta Sapo</h1><br>
+
+</head>
+<!--MODIFICADO-->
+<!--HACIENDO MAS COSAS-->
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
+  </style>
+
+<body>
+    
+    
+    <form action="" >
+        <h2>Registro de jugadores</h2>
+        <label for="Nombre" >Nombre</label>
+        <input type="text" id = "nombre" name = "nombre" placeholder = "Nombre"><br><br><br>
+
+    </form>   
+    
+    <button type = "button" onclick = "registrarJugador()" id = "registrarJugador">Registrar Jugador</button> <br><br><br>
+
+      <form action="">
+
+        <h2 >Modalidad de juego</h2>    
+        <label for="tiroPorRonda">Cantidad de tiros por ronda</label>
+        <input type="text" id = "tiroPorRonda" name = "tiroPorRonda" placeholder = "ejem: 3, 1, 2, etc..."> <br><br>
+
+        <label for="eliminadosPorRonda">Numero de eliminados por ronda</label>
+        <input type="text" id = "eliminadosPorRonda" name = "eliminadosPorRonda" placeholder = "ejem: 3, 1, 2, etc..."> <br><br>
+      </form> 
+
+      <br><br><br>
+      
+
+      
+      <button type = "button" onclick = "iniciarJuego()" id = "iniciarJuego">Iniciar juego</button> <br><br><br>
+    
+      <h3 id="nombrePuntos"></h3><br>
+      <input type="number" id="inputPuntos" >
+      <button type="button" onclick="agregarPuntos()" id="agregarPuntos">Sumar puntos</button>
+
+      <table id = "miTabla">
+
+        
+        <H2>Tabla de puntos</H2>
+        <thead>
+            <tr> <!-- Esto son las filas -->
+            
+              <th rowspan="2" id = "jugador"> Jugador </th> <!--Estas son columnas-->
+              <th   id = "numRonda" colspan="">Ronda ##</th>
+              
+            </tr>
+            <tr id = "tirosPorRonda">
+            
+            </tr>
+        </thead>
+        
+        <tbody id= "miTbody">
+            
+        </tbody>
+            
+            
+    
+      </table>
+
+      <br><br><br>
+
+      <button type = "button" onclick = "siguienteRonda()" id = "siguienteRonda">Siguiente Ronda</button> 
+      <button type = "button" onclick = "terminarJuego()" id = "terminarJuego">Terminar juego</button> <br><br><br>
+   
+      <script src="proyectoPuntos.js"></script>
+</body>
+</html>
